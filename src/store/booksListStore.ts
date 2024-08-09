@@ -1,6 +1,7 @@
-import { getItem, removeItem, setItem } from "../services/LocalStorage.ts";
-import axios, { AxiosResponse } from "axios";
-import { Book } from "../types/BooksTypes.ts";
+import { getItem, removeItem, setItem } from "@/services/LocalStorage.ts";
+import axios from "axios";
+import type { AxiosResponse } from "axios";
+import type { Book } from "@/types/BooksTypes.ts";
 
 export const useBooksStore = defineStore("books", () => {
     const booksList = ref<Book[]>(getItem("booksList") || []),

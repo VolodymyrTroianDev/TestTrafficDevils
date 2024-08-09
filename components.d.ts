@@ -7,12 +7,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AdminPage: typeof import('./src/views/manage-users/AdminPage.vue')['default']
     App: typeof import('./src/App.vue')['default']
     BookForm: typeof import('./src/views/manage-books/BookForm.vue')['default']
     BookItems: typeof import('./src/views/manage-books/BookItems.vue')['default']
     BooksPage: typeof import('./src/views/manage-books/BooksPage.vue')['default']
-    CreateBook: typeof import('./src/views/manage-books/CreateBook.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Home: typeof import('./src/views/Home.vue')['default']

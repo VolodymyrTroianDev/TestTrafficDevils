@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
-import { hashPassword } from "../services/HashPassword.ts";
-import { getItem, removeItem, setItem } from "../services/LocalStorage.ts";
-import { User } from "../types/UsersTypes.ts";
+import { hashPassword } from "@/services/HashPassword.ts";
+import { getItem, removeItem, setItem } from "@/services/LocalStorage.ts";
+import type { User } from "@/types/UsersTypes";
 
 export const useAuthStore = defineStore("auth", () => {
     const usersList = ref<User[]>(getItem('usersList') || []),

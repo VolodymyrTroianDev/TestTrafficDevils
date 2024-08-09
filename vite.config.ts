@@ -31,9 +31,9 @@ export default defineConfig({
                 'vue-router',
                 'pinia',
                 {
-                    "@/store/messageStore": ["useMessageStore"],
-                    "@/store/authStore": ["useAuthStore"],
-                    "@/store/booksListStore": ["useBooksStore"]
+                    "/src/store/messageStore": ["useMessageStore"],
+                    "/src/store/authStore": ["useAuthStore"],
+                    "/src/store/booksListStore": ["useBooksStore"]
                 }
             ],
             dts: 'auto-imports.d.ts',

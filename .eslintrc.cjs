@@ -1,13 +1,16 @@
+/* eslint-env node */
 module.exports = {
+    root: true,
     env: {
-        node: true,
+        node: true
     },
-    extends: [
-        'eslint:recommended',
-        "plugin:vue/vue3-recommended",
-        "prettier"
+    "extends": [
+        "plugin:vue/vue3-essential",
+        "eslint:recommended",
+        "@vue/eslint-config-typescript",
+        "@vue/eslint-config-prettier/skip-formatting"
     ],
-    rules: {
-        "vue/require-default-prop": "off",
+    parserOptions: {
+        ecmaVersion: "latest"
     }
-}
+};

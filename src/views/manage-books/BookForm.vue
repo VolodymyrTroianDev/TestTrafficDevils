@@ -119,10 +119,10 @@
 </template>
 <script setup lang="ts">
 import { ErrorMessage, Field, Form as MyForm } from "vee-validate";
-import { Book } from "../../types/BooksTypes.ts";
+import type { Book } from "../../types/BooksTypes.ts";
 
 const route = useRoute(),
-  router = useRoute(),
+  router = useRouter(),
   booksStore = useBooksStore(),
   authStore = useAuthStore(),
   { userInfo } = storeToRefs(authStore),

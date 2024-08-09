@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write",
@@ -24,6 +24,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
+    "@tsconfig/node18": "^18.2.0",
+    "@types/node": "^18.17.5",
+    "@vue/tsconfig": "^0.4.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.27.0",

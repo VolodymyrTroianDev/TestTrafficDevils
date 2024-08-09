@@ -1,24 +1,31 @@
 import { createRouter, createWebHistory } from "vue-router";
 import type { RouteRecordRaw } from "vue-router";
-import { storeToRefs } from "pinia";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Home from "../views/Home.vue";
+import LoginForm from "../views/login/LoginForm.vue";
+import UsersPage from "../views/manage-users/UsersPage.vue";
+import UserForm from "../views/manage-users/UserForm.vue";
+import BookForm from "../views/manage-books/BookForm.vue";
+import BooksPage from "../views/manage-books/BooksPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
         name: "Home",
         components: {
-            header: import("../components/Header.vue"),
-            default: () => import("../views/Home.vue"),
-            footer: () => import("../components/Footer.vue"),
+            header: Header,
+            default: Home,
+            footer: Footer,
         }
     },
     {
         path: "/login",
         name: "Login",
         components: {
-            header: import("../components/Header.vue"),
-            default: () => import("../views/login/LoginForm.vue"),
-            footer: () => import("../components/Footer.vue"),
+            header: Header,
+            default: LoginForm,
+            footer: Footer
         }
     },
     {
@@ -29,27 +36,27 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/users",
                 name: "Users",
                 components: {
-                    header: import("../components/Header.vue"),
-                    default: () => import("../views/manage-users/UsersPage.vue"),
-                    footer: () => import("../components/Footer.vue"),
+                    header: Header,
+                    default: UsersPage,
+                    footer: Footer,
                 },
             },
             {
                 path: "/users/create",
                 name: "CreateUsers",
                 components: {
-                    header: import("../components/Header.vue"),
-                    default: () => import("../views/manage-users/UserForm.vue"),
-                    footer: () => import("../components/Footer.vue"),
+                    header: Header,
+                    default: UserForm,
+                    footer: Footer,
                 },
             },
             {
                 path: "/users/edit/:id",
                 name: "EditUsers",
                 components: {
-                    header: import("../components/Header.vue"),
-                    default: () => import("../views/manage-users/UserForm.vue"),
-                    footer: () => import("../components/Footer.vue"),
+                    header: Header,
+                    default: UserForm,
+                    footer: Footer,
                 },
             }
         ]
@@ -62,27 +69,27 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/books",
                 name: "Books",
                 components: {
-                    header: import("../components/Header.vue"),
-                    default: () => import("../views/manage-books/BooksPage.vue"),
-                    footer: () => import("../components/Footer.vue"),
+                    header: Header,
+                    default: BooksPage,
+                    footer: Footer,
                 },
             },
             {
                 path: "/books/create",
                 name: "CreateBooks",
                 components: {
-                    header: import("../components/Header.vue"),
-                    default: () => import("../views/manage-books/BookForm.vue"),
-                    footer: () => import("../components/Footer.vue"),
+                    header: Header,
+                    default: BookForm,
+                    footer: Footer,
                 },
             },
             {
                 path: "/books/edit/:id",
                 name: "EditBooks",
                 components: {
-                    header: import("../components/Header.vue"),
-                    default: () => import("../views/manage-books/BookForm.vue"),
-                    footer: () => import("../components/Footer.vue"),
+                    header: Header,
+                    default: BookForm,
+                    footer: Footer,
                 },
             }
         ]
