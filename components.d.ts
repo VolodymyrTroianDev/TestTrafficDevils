@@ -7,9 +7,24 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AdminPage: typeof import('./src/views/manage-users/AdminPage.vue')['default']
     App: typeof import('./src/App.vue')['default']
-    Login: typeof import('./src/views/Login/Login.vue')['default']
+    BookForm: typeof import('./src/views/manage-books/BookForm.vue')['default']
+    BookItems: typeof import('./src/views/manage-books/BookItems.vue')['default']
+    BooksPage: typeof import('./src/views/manage-books/BooksPage.vue')['default']
+    CreateBook: typeof import('./src/views/manage-books/CreateBook.vue')['default']
+    Footer: typeof import('./src/components/Footer.vue')['default']
+    Header: typeof import('./src/components/Header.vue')['default']
+    Home: typeof import('./src/views/Home.vue')['default']
+    LoginForm: typeof import('./src/views/login/LoginForm.vue')['default']
+    MyAlert: typeof import('./src/components/customUi/MyAlert.vue')['default']
+    MyInput: typeof import('./src/components/customUi/MyInput.vue')['default']
+    MyModal: typeof import('./src/components/customUi/MyModal.vue')['default']
+    MyTextArea: typeof import('./src/components/customUi/MyTextArea.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UserForm: typeof import('./src/views/manage-users/UserForm.vue')['default']
+    UserItem: typeof import('./src/views/manage-users/UserItem.vue')['default']
+    UsersPage: typeof import('./src/views/manage-users/UsersPage.vue')['default']
   }
 }

@@ -17,17 +17,8 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "types": [
-      "webpack-env",
-      "@types/node",
-      "@vue/runtime-core",
-      "@vue/test-utils"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types"
-    ],
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["@vue/test-utils"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
